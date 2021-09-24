@@ -33,14 +33,8 @@ namespace MijnGame14
         public Placeable(char symbol = ' ') {
             this.Symbol = symbol;
         }
-        public void ResetPosition() {
-            Position = new Coordinate(0, 0);
-        }
         public virtual void Draw() {
             Drawer.WriteDown(Position, "" + Symbol);
-        }
-        public void Erase() {
-            Drawer.WriteDown(Position," ");
         }
         public virtual char Symbol { get; }
     }
@@ -78,8 +72,6 @@ namespace MijnGame14
     class Player : Placeable {
         public string Name { get; set; }
         public Queue<Coordinate> Body { get; set; }
-        public int BodyLength { get; set; }
-        public int Points { get; set; }
         public char Direction { get; set; } // {u, r, d, l}
         public Player() : base('*') {
             this.Body = new Queue<Coordinate>();
@@ -100,7 +92,7 @@ namespace MijnGame14
             foreach(Coordinate c in Body){
                 Drawer.WriteDown(c, "*");
             }
-            Drawer.WriteDown(Position,"H");
+            Drawer.WriteDown(Position,"@");
         }
 
         public void kapoof(){
@@ -111,17 +103,8 @@ namespace MijnGame14
             Console.WriteLine("KAPOOOOOOOF!!!");
             Console.ReadLine();
         }
-        public static bool operator >(Player sp1, Player sp2) {
-            return sp1.Points > sp2.Points;
-        }
-        public static bool operator <(Player sp1, Player sp2) {
-            return sp1.Points < sp2.Points;
-        }
     }
-    // class Vijandje : Placeable {
-    //     public Vijandje() : base('E') { }
-    // }
-    class Field : Drawable
+        class Field : Drawable
     {
         public int Width { get; set; } = 60;
         public int Height { get; set; } = 18;
@@ -137,25 +120,12 @@ namespace MijnGame14
             }
             for (int i=1; i<Width; i++) Drawer.WriteDown(new Coordinate(i,Height+1),"_");
         }
-        // public void Clear(){
-            
-        // }
     }
-    static class AantalExtensie
-    {
-        public static String AantalString(this int num) {
-            if (num >= 1000000000) { return (num / 1000000000).ToString() + "B"; }
-            if (num >= 1000000) { return (num / 1000000).ToString() + "M"; }
-            if (num >= 1000) { return (num / 1000).ToString() + "k"; }
-            return num.ToString();  
-        }
-    }
+    
     class Level : Drawable
     {
         public Field veld = new Field();
-        // public List<Vijandje> Vijandjes { get; set; }
         public string Name { get; set; }
-        public int? Moeilijkheid { get; set; }
         public void Draw()
         {
             veld.Draw();
@@ -171,21 +141,13 @@ namespace MijnGame14
 
         public static void Init(){
             Console.CursorVisible = false;
-            Console.WriteLine("Welcome to Snakescii! \n Enter your name.");
-            player = new Player() { Points = 10 };
-            player.Name = Console.ReadLine();
+            player = new Player();
             player.Body.Enqueue(new Coordinate(7,5));
             player.Body.Enqueue(new Coordinate(6,5));
             player.Position = new Coordinate(5,5);
             player.Body.Enqueue(player.Position);
             player.Direction='r';
-            level = new Level() { 
-                // Vijandjes = new List<Vijandje>() { 
-                // new Vijandje() { Position = new Coordinate(1, 3) }, 
-                // new Vijandje() { Position = new Coordinate(2, 2) } 
-                // }
-            };
-            
+            level = new Level();
             coin = new Coin(level.veld.Width, level.veld.Height);
             level.Draw();
             player.Draw();
@@ -250,6 +212,3 @@ namespace MijnGame14
         }
     }
 }
-        //    \  |  /
-        // - kapooooof -
-        //    /  |  \
