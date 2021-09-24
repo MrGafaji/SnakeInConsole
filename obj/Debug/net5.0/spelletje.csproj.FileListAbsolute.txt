@@ -1,0 +1,16 @@
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.csproj.AssemblyReference.cache
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.AssemblyInfoInputs.cache
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.AssemblyInfo.cs
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.csproj.CoreCompileInputs.cache
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.exe
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.deps.json
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.runtimeconfig.json
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.runtimeconfig.dev.json
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.dll
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\ref\spelletje.dll
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\bin\Debug\net5.0\spelletje.pdb
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.dll
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\ref\spelletje.dll
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.pdb
+C:\Users\Maike\Documents\Webdev\WPFW opdrachten\spelletje\obj\Debug\net5.0\spelletje.genruntimeconfig.cache
